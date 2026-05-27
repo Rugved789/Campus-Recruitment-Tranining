@@ -10,8 +10,14 @@ void main(){
             index=i;
             break;
         }
-
     }
-    printf("Element is found at : %d and location : %d",index,index+1);
+
+    if(index){
+            printf("Element is found at : %d and location : %d\n",index,index+1);
+    }
+    else{
+        printf("Not found");
+    }
+
 
 }
