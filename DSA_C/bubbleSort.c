@@ -1,5 +1,23 @@
 #include<stdio.h>
 
+int sort (int arr[],int size){
+    for(int i=0;i<size-1;i++){
+        for(int j= 0;j<size-1-i;j++){
+            if(arr[j]>arr[j+1]){
+                int temp = arr[j+1];
+                arr[j+1]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    return 0;
+}
+void printarray(int arr[],int size){
+    for(int i=0;i<size;i++){
+        printf("%d ",arr[i]);
+    }
+}
+
 int main(){
 
 
@@ -11,22 +29,9 @@ int main(){
         printf("%d ",arr[i]);
     }
 
-    for(int i=0;i<size-1;i++){
-        for(int j= 0;j<size-1-i;j++){
-            if(arr[j]>arr[j+1]){
-                int temp = arr[j+1];
-                arr[j+1]=arr[j];
-                arr[j]=temp;
-
-            }
-        }
-    }
-    
+    sort(arr,size);    
     printf("\n");
-    
     printf("Sorted Array:");
-    for(int i=0;i<size;i++){
-        printf("%d ",arr[i]);
-    }
+    printarray(arr,size);
     return 0;
 }
