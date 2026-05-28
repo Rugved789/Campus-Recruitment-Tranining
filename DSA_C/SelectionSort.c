@@ -5,12 +5,12 @@ int sort (int arr[],int size){
         int min=i;
         for(int j=i+1;j<size;j++){
             if(arr[j]<arr[min]){
-                int temp = arr[j];
-                arr[j]=arr[min];
-                arr[min]=temp;
+                min=j;
             }
-
         }
+        int temp = arr[i];
+        arr[i]=arr[min];
+        arr[min]=temp;
     }
     return 0;
 }
