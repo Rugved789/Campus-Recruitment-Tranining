@@ -74,6 +74,24 @@ void insertAtBegin(struct Node **head, int data) {
 	*head=newNode;
 }
 
+//insert at end
+void insertAtEnd(struct Node **head, int data) {
+	struct Node *newNode = createNode(data);
+
+	if (*head == NULL) {
+		*head = newNode;
+		return;
+	}
+
+	struct Node *temp = *head;
+
+	while (temp->next != NULL) {
+		temp = temp->next;
+	}
+
+	temp->next = newNode;
+}
+
 int main() {
 	struct Node *head = NULL;
 
@@ -93,6 +111,11 @@ int main() {
 	insertAtBegin(&head, 5);
 
 	printf("After inserting in Begining: ");
+	display(head);
+
+	insertAtEnd(&head, 50);
+
+	printf("After inserting at end: ");
 	display(head);
 
 	return 0;
