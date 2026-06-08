@@ -61,6 +61,19 @@ void insertAtMiddle(struct Node **head, int data) {
 	temp->next = newNode;
 }
 
+void insertAtBegin(struct Node **head, int data) {
+	struct Node *newNode = createNode(data);
+
+	if (*head == NULL) {
+		printf("Linked list is empty\n");
+		free(newNode);
+		return;
+	}
+
+	newNode->next = *head;
+	*head=newNode;
+}
+
 int main() {
 	struct Node *head = NULL;
 
@@ -75,6 +88,11 @@ int main() {
 	insertAtMiddle(&head, 25);
 
 	printf("After inserting in middle: ");
+	display(head);
+
+	insertAtBegin(&head, 5);
+
+	printf("After inserting in Begining: ");
 	display(head);
 
 	return 0;
