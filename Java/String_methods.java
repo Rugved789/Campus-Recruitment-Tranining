@@ -23,6 +23,21 @@ public class String_methods {
 
         String str3 = new StringBuffer(str1).reverse().toString();
         System.out.println(str3);
-        
+
+        if(str1.equals(str3)){
+            System.out.println("Palindrome");
+        }
+        else{
+            System.out.println("Not");
+        }
+
+        int count =0;
+        for(int i=0;i<str1.length();i++){
+            if(str1.charAt(i)=='a' || str1.charAt(i)=='e' || str1.charAt(i)=='i' || str1.charAt(i)=='o' || str1.charAt(i)=='u'){
+                count++;
+            }
+        }
+        System.out.println("No of vowels are "+ count);
+
     }
 }
