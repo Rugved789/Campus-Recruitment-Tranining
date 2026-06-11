@@ -1,5 +1,5 @@
 class DataTypes {
-    public static void main(String[] args) {
+    public static void main(String_methods[] args) {
         // Primitive data types
         int myInt = 10; // Integer
         double myDouble = 3.14; // Floating-point number
@@ -7,7 +7,7 @@ class DataTypes {
         boolean myBoolean = true; // Boolean
 
         // Non-primitive data types (Objects)
-        String myString = "Hello, World!"; // String
+        String_methods myString = "Hello, World!"; // String
 
         // Output the values
         System.out.println("Integer: " + myInt);
