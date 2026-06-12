@@ -1,41 +1,54 @@
 class Student{
-    int rollno;
-    String name;
-    String branch;
+    private int rollno;
+    private String name;
+    private String branch;
 
-    
+    // Setter method
+    public void setInfo(String name, int rollno, String branch){
+        this.name = name;
+        this.rollno = rollno;
+        this.branch = branch;
+    }
+
+    // Getter methods
+    public int getRollno(){
+        return this.rollno;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public String getBranch(){
+        return this.branch;
+    }
+
+    // Combined getter method
+    public String getInfo(){
+        return "Name:" + this.name + " Roll No:" + this.rollno + " Branch:" + this.branch;
+    }
 }
 public class ClassesAndObjects {
     public static void main(String[] args) {
         Student std1 = new Student();
-        std1.name = "Rugved";
-        std1.rollno=51;
-        std1.branch="CSE";
+        std1.setInfo("Rugved", 51, "CSE");
 
         Student std2 = new Student();
-        std2.name = "Asha";
-        std2.rollno = 52;
-        std2.branch = "ECE";
+        std2.setInfo("Asha", 52, "ECE");
 
         Student std3 = new Student();
-        std3.name = "Karan";
-        std3.rollno = 53;
-        std3.branch = "ME";
+        std3.setInfo("Karan", 53, "ME");
 
         Student std4 = new Student();
-        std4.name = "Nisha";
-        std4.rollno = 54;
-        std4.branch = "CE";
+        std4.setInfo("Nisha", 54, "CE");
 
         Student std5 = new Student();
-        std5.name = "Vikram";
-        std5.rollno = 55;
-        std5.branch = "CSE";
+        std5.setInfo("Vikram", 55, "CSE");
 
-        System.out.printf("Name:%s Roll No:%d Branch:%s%n",std1.name,std1.rollno,std1.branch);
-        System.out.printf("Name:%s Roll No:%d Branch:%s%n",std2.name,std2.rollno,std2.branch);
-        System.out.printf("Name:%s Roll No:%d Branch:%s%n",std3.name,std3.rollno,std3.branch);
-        System.out.printf("Name:%s Roll No:%d Branch:%s%n",std4.name,std4.rollno,std4.branch);
-        System.out.printf("Name:%s Roll No:%d Branch:%s%n",std5.name,std5.rollno,std5.branch);
+        System.out.println(std1.getInfo());
+        System.out.println(std2.getInfo());
+        System.out.println(std3.getInfo());
+        System.out.println(std4.getInfo());
+        System.out.println(std5.getInfo());
     }
 }
