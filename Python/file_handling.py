@@ -23,8 +23,10 @@ writer.writerow(["Rishikesh", 32, "Raipur"])
 writer.writerow(["Soniya", 28, "Indore"])
 writer.writerow(["Sarthak", 20, "Jaipur"])
 
-file = open("example.csv", "r")
+file = open("example.csv", "r")ss
 reader = csv.reader(file)
 for row in reader:
     print (row)
 file.close()
+
+
